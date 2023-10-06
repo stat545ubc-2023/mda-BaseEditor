@@ -99,7 +99,7 @@ And that is exactly the first thing that you will do!
 *Hint:* This is one of those times when you should think about the cleanliness of your analysis. I added a single code chunk for you below, but do you want to use more than one? Would you like to write more comments outside of the code chunk?
 
 <!-------------------------- Start your work below ---------------------------->
-#### Data Exploration
+### Data Exploration
 
 ```{r}
 
@@ -126,7 +126,7 @@ glimpse(cancer_sample)
 1.3 **(1 point)** Now that you've explored the 4 datasets that you were initially most interested in, let's narrow it down to 1. What lead you to choose this one? Briefly explain your choice below.
 
 <!-------------------------- Start your work below ---------------------------->
-#### Dataset Choice
+### Dataset Choice
 
 I have chosen the dataset *building_permits*. My dad works as a structural engineer in Vancouver, and I have thus heard a lot about building projects in the city over the years. As a result, I thought it would interesting to work with some of the data surrounding the building projects in Vancouver, to get a better idea about the relationships between different variables within projects.
 <!----------------------------------------------------------------------------->
@@ -134,7 +134,7 @@ I have chosen the dataset *building_permits*. My dad works as a structural engin
 1.4 **(2 points)** Time for a final decision! Going back to the beginning, it's important to have an *end goal* in mind. For example, if I had chosen the `titanic` dataset for my project, I might've wanted to explore the relationship between survival and other variables. Try to think of 1 research question that you would want to answer with your dataset. Note it down below.
 
 <!-------------------------- Start your work below ---------------------------->
-#### End Goal
+### End Goal
 
 I am hoping to explore potential trends between the number of developments for the purpose of residence over the years, and how other variables may affect this. Given the difficulty many people are having in finding places to live in Vancouver, I think it would be interesting to look into some variables surrounding new projects supporting residence.
 <!----------------------------------------------------------------------------->
@@ -165,7 +165,7 @@ Make sure that you're using dplyr and ggplot2 rather than base R for this task. 
 2.2 **(4 points)** For each of the 4 exercises that you complete, provide a *brief explanation* of why you chose that exercise in relation to your data (in other words, why does it make sense to do that?), and sufficient comments for a reader to understand your reasoning and code.
 
 <!-------------------------- Start your work below ---------------------------->
-#### Exercise Choice
+### Exercise Choice
 
 Chosen exerciese: 1, 4, 5, 6.
 
@@ -178,7 +178,7 @@ Chosen exerciese: 1, 4, 5, 6.
 6. I chose this exercise to visualize the project_value of projects building dwellings, across each type_of_work. The purpose of this is to gain insight into the amount of money being put into different varieties of work regarding dwellings.
 
 
-#### Exercise Exploration
+### Exercise Exploration
 
 ```{r}
 library(ggplot2)
@@ -187,7 +187,7 @@ library(dplyr)
 # Packages to load prior to running exercise code
 ```
 
-##### Exercise 1
+#### Exercise 1
 
 1.
 ```{R}
@@ -235,6 +235,7 @@ building_permits%>%
     geom_boxplot(fill = "antiquewhite4") +
     theme(axis.text.x = element_text(angle = 30, hjust = 0.5, vjust = 0.5)) +
     scale_y_continuous(labels = scales::dollar_format())
+    print()
     
 # This boxplot is designed to visualize the project_value of projects building dwellings, across each type_of_work. Property_use has been filtered to only include "Dwelling Uses", project_value has been filtered to fall within $100,000 and $10,000,000 since very few projects existed above $10,000,000. This allowed greater represtation of lower budget projects given they made up the bulk of the projects. Projects under $100,000 were cut to include projects with more major impact.
 
@@ -247,7 +248,7 @@ building_permits%>%
 
 <!--- *****START HERE***** --->
 
-#### Research Questions for Milestone 2
+### Research Questions for Milestone 2
 
 1: How is money distributed across property_use for large projects, above $50,000,000.
 
