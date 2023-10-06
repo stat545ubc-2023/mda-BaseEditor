@@ -235,7 +235,6 @@ building_permits%>%
     geom_boxplot(fill = "antiquewhite4") +
     theme(axis.text.x = element_text(angle = 30, hjust = 0.5, vjust = 0.5)) +
     scale_y_continuous(labels = scales::dollar_format())
-    print()
     
 # This boxplot is designed to visualize the project_value of projects building dwellings, across each type_of_work. Property_use has been filtered to only include "Dwelling Uses", project_value has been filtered to fall within $100,000 and $10,000,000 since very few projects existed above $10,000,000. This allowed greater represtation of lower budget projects given they made up the bulk of the projects. Projects under $100,000 were cut to include projects with more major impact.
 
